@@ -1,7 +1,16 @@
 body {
   padding-top: 50px;
 }
-.starter-template {
-  padding: 40px 15px;
-  text-align: center;
+
+.category-tabs {
+    margin-bottom: 10px;
+}
+
+.material-image {
+    width: 80px;
+    height: 80px;
+}
+
+#user-search {
+    width: 300px;
 }
