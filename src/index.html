@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="kykomat">
    <head>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +7,6 @@
       <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
       <title>KyKoMat</title>
       <!-- Bootstrap -->
-      <link href="css/bootstrap.min.css" rel="stylesheet">
       <!-- Latest compiled and minified CSS -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
       <!-- Optional theme -->
@@ -20,6 +19,9 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
       <![endif]-->
+       
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+      <script src="js/kykomat.js"></script>
    </head>
    <body>
       <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -58,145 +60,24 @@
             <!--/.nav-collapse -->
          </div>
       </nav>
-      <div class="container-fluid">
+      <div class="container-fluid" ng-controller="mainController">
          <div class="starter-template">
             <h1>Materialmanagement</h1>
             <p class="lead">Klicken Sie auf die Artikel in der linken Spalte um sie dem aktuellen Benutzer zuzuweisen.</p>
          </div>
+          
          <div class="row">
             <div class="warehouse col-md-6">
                <h2 class="page-header">Ausgabe</h2>
                <ul class="category-tabs nav nav-tabs">
-                  <li role="presentation" class="active"><a href="#">Bohrer</a></li>
-                  <li role="presentation"><a href="#">Sets</a></li>
-                  <li role="presentation"><a href="#">Material</a></li>
+                  <li ng-repeat="category in materialCategories" role="presentation"><a href="#"> {{ category.name }} </a></li>
                </ul>
-               <div class="panel panel-default">
-                  <div class="panel-heading">
-                     <h3 class="panel-title">Bohrer</h3>
-                  </div>
-                  <div class="panel-body">
-                     <div class="list-group">
-                        <a href="#" class="list-group-item col-xs-6">
-                           <div class="media">
-                              <div class="media-left">
-                                 <img class="media-object material-image" src="images/objects/dummy-100x100-Rocker.jpg" alt="...">
-                              </div>
-                              <div class="media-body">
-                                 <h4 class="media-heading">Media heading</h4>
-                                 Lorem ipsum dolor sit amet.
-                              </div>
-                           </div>
-                        </a>
-                        <a href="#" class="list-group-item col-xs-6">
-                           <div class="media">
-                              <div class="media-left">
-                                 <img class="media-object material-image" src="images/objects/dummy-200x200-WindRose.jpg" alt="...">
-                              </div>
-                              <div class="media-body">
-                                 <h4 class="media-heading">Media heading</h4>
-                                 Lorem ipsum dolor sit amet.
-                              </div>
-                           </div>
-                        </a>
-                        <a href="#" class="list-group-item col-xs-6">
-                           <div class="media">
-                              <div class="media-left">
-                                 <img class="media-object material-image" src="images/objects/dummy-315x560-LaserTowardsMilkyWaysCentre.jpg" alt="...">
-                              </div>
-                              <div class="media-body">
-                                 <h4 class="media-heading">Media heading</h4>
-                                 Lorem ipsum dolor sit amet.
-                              </div>
-                           </div>
-                        </a>
-                        <a href="#" class="list-group-item col-xs-6">
-                           <div class="media">
-                              <div class="media-left">
-                                 <img class="media-object material-image" src="images/objects/dummy-375x500-SewingMachine.jpg"images/objects/dummy-100x100-Rocker.jpg"" alt="...">
-                              </div>
-                              <div class="media-body">
-                                 <h4 class="media-heading">Media heading</h4>
-                                 Lorem ipsum dolor sit amet.
-                              </div>
-                           </div>
-                        </a>
-                        <a href="#" class="list-group-item col-xs-6">
-                           <div class="media">
-                              <div class="media-left">
-                                 <img class="media-object material-image" src="images/objects/dummy-454x280-MeasuringTape.jpg"images/objects/dummy-100x100-Rocker.jpg"" alt="...">
-                              </div>
-                              <div class="media-body">
-                                 <h4 class="media-heading">Media heading</h4>
-                                 Lorem ipsum dolor sit amet.
-                              </div>
-                           </div>
-                        </a>
-                     </div>
-                  </div>
-               </div>
-               <div class="panel panel-default">
-                  <div class="panel-heading">
-                     <h3 class="panel-title">Sets</h3>
-                  </div>
-                  <div class="panel-body">
-                     <div class="list-group">
-                        <a href="#" class="list-group-item col-xs-6">
-                           <h4 class="list-group-item-heading">List group item heading</h4>
-                           <p class="list-group-item-text">...</p>
-                        </a>
-                        <a href="#" class="list-group-item col-xs-6">
-                           <h4 class="list-group-item-heading">List group item heading</h4>
-                           <p class="list-group-item-text">...</p>
-                        </a>
-                        <a href="#" class="list-group-item col-xs-6">
-                           <h4 class="list-group-item-heading">List group item heading</h4>
-                           <p class="list-group-item-text">...</p>
-                        </a>
-                        <a href="#" class="list-group-item col-xs-6">
-                           <h4 class="list-group-item-heading">List group item heading</h4>
-                           <p class="list-group-item-text">...</p>
-                        </a>
-                        <a href="#" class="list-group-item col-xs-6">
-                           <h4 class="list-group-item-heading">List group item heading</h4>
-                           <p class="list-group-item-text">...</p>
-                        </a>
-                        <a href="#" class="list-group-item col-xs-6">
-                           <h4 class="list-group-item-heading">List group item heading</h4>
-                           <p class="list-group-item-text">...</p>
-                        </a>
-                        <a href="#" class="list-group-item col-xs-6">
-                           <h4 class="list-group-item-heading">List group item heading</h4>
-                           <p class="list-group-item-text">...</p>
-                        </a>
-                        <a href="#" class="list-group-item col-xs-6">
-                           <h4 class="list-group-item-heading">List group item heading</h4>
-                           <p class="list-group-item-text">...</p>
-                        </a>
-                     </div>
-                  </div>
-               </div>
-               <div class="panel panel-default">
-                  <div class="panel-heading">
-                     <h3 class="panel-title">Material</h3>
-                  </div>
-                  <div class="panel-body">
-                     <div class="list-group">
-                        <a href="#" class="list-group-item col-xs-6">
-                           <h4 class="list-group-item-heading">List group item heading</h4>
-                           <p class="list-group-item-text">...</p>
-                        </a>
-                        <a href="#" class="list-group-item col-xs-6">
-                           <h4 class="list-group-item-heading">List group item heading</h4>
-                           <p class="list-group-item-text">...</p>
-                        </a>
-                        <a href="#" class="list-group-item col-xs-6">
-                           <h4 class="list-group-item-heading">List group item heading</h4>
-                           <p class="list-group-item-text">...</p>
-                        </a>
-                     </div>
-                  </div>
-               </div>
+                
+                <category-box ng-repeat="category in materialCategories">
+                  <material ng-repeat="material in materials"></material>
+                </category-box>
+
+
             </div>
             <div class="student col-md-6">
                <h2 class="page-header">Aktuellen Benutzer Auswählen</h2>
@@ -255,13 +136,13 @@
                      <div class="panel-footer">
                         <div class="row">
                            <div class="col-md-2">
-                              <img src="images/people/dummy-100x100-RobertDeNiro.jpg">
+                              <img class="avatar" ng-src="{{students[0].image}}">
                            </div>
                            <div class="col-md-10">
-                              <h4><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Marcus Exner</h4>
+                              <h4><span class="glyphicon glyphicon-user" aria-hidden="true"></span> {{students[0].name}}</h4>
                               <p>
-                                 <strong>Matrikelnummer: </strong> 12345678 <br>
-                                 <strong>Kurs:</strong> Tätigkeit als Praktikant
+                                 <strong>Matrikelnummer: </strong> {{students[0].matrikelnummer}} <br>
+                                 <strong>Kurs:</strong> {{students[0].course}}
                               </p>
                            </div>
                         </div>
