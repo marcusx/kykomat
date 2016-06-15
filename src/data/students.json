@@ -1,0 +1,34 @@
+{
+  "students": [
+    {
+      "name": "Marcus Exner",
+      "matrikelnummer": "123456789",
+      "image": "/src/images/faces/face_4548488065_s.jpg",
+      "course": "Tätigkeit als Praktikant"
+    },
+    {
+      "name": "Florian Huber",
+      "matrikelnummer": "0987654433212",
+      "image": "/src/images/faces/Face_5942253815_s.jpg",
+      "course": "Zahnmedizin 1"
+    },
+    {
+      "name": "Seppi Schnabelschuh",
+      "matrikelnummer": "6133185",
+      "image": "/src/images/faces/Face_14193274415_s.jpg",
+      "course": "Zahnmedizin 2"
+    },
+    {
+      "name": "Alexander Meissner",
+      "matrikelnummer": "593740508",
+      "image": "/src/images/faces/faces_5942419651_s.jpg",
+      "course": "Zahnmedizin 1"
+    },
+    {
+      "name": "Reinhard Holzer",
+      "matrikelnummer": "82730358125",
+      "image": "/src/images/faces/faces_5942420493_s.jpg",
+      "course": "Wurzelbehandlung Spezial"
+    }
+  ]
+}
