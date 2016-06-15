@@ -1,0 +1,25 @@
+<div class="panel panel-primary">
+   <div class="panel-heading">
+      <div class="list-group">
+         <material ng-repeat="material in students[0].materials"></material>
+      </div>
+      <div class="clearfix"></div>
+   </div>
+   <a href="#">
+      <div class="panel-footer">
+         <div class="row">
+            <div class="col-md-2">
+               <img class="avatar" ng-src="{{students[0].image}}">
+            </div>
+            <div class="col-md-10">
+               <h4><span class="glyphicon glyphicon-user" aria-hidden="true"></span> {{students[0].name}}</h4>
+               <p>
+                  <strong>Matrikelnummer: </strong> {{students[0].matrikelnummer}} <br>
+                  <strong>Kurs:</strong> {{students[0].course}}
+               </p>
+            </div>
+         </div>
+         <div class="clearfix"></div>
+      </div>
+   </a>
+</div>

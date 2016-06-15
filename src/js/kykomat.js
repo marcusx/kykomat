@@ -25,3 +25,10 @@ kykomat.directive('categoryBox', function () {
         templateUrl: 'templates/category-box.html'
     };
 });
+
+kykomat.directive('currentUser', function () {
+    return {
+        transclude: false,
+        templateUrl: 'templates/current-user.html'
+    };
+});
