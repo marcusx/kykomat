@@ -1,56 +1,37 @@
 {
   "students": [
     {
+      "id": 1,
       "name": "Marcus Exner",
       "matrikelnummer": "123456789",
       "image": "/src/images/faces/face_4548488065_s.jpg",
       "course": "Tätigkeit als Praktikant",
-      "materials": [
-        {
-        "id": "1",
-        "name": "Bohrer",
-        "description": "Rundbohrer für Großlöcher",
-        "image": "http://p-hold.com/people/100/100",
-        "category": "Werkzeuge",
-        "category_id": "1"
-        },
-        {
-      "id": "2",
-      "name": "Bohrer",
-      "description": "Rundbohrer für Großlöcher",
-      "image": "http://p-hold.com/people/100/100",
-      "category": "Werkzeuge",
-      "category_id": "1"
-       },
-       {
-      "id": "3",
-      "name": "Bohrer",
-      "description": "Rundbohrer für Großlöcher",
-      "image": "images/materials/dummy-100x100-Rocker.jpg",
-      "category": "Werkzeuge",
-      "category_id": "1"
-      }
-      ]
+      "materials": [3,4,5]
     },
     {
+      "id": 2,
       "name": "Florian Huber",
       "matrikelnummer": "0987654433212",
       "image": "/src/images/faces/Face_5942253815_s.jpg",
-      "course": "Zahnmedizin 1"
+      "course": "Zahnmedizin 1",
+      "materials": [1,2,6]    
     },
     {
+      "id": 3,
       "name": "Seppi Schnabelschuh",
       "matrikelnummer": "6133185",
       "image": "/src/images/faces/Face_14193274415_s.jpg",
       "course": "Zahnmedizin 2"
     },
     {
+      "id": 4,
       "name": "Alexander Meissner",
       "matrikelnummer": "593740508",
       "image": "/src/images/faces/faces_5942419651_s.jpg",
       "course": "Zahnmedizin 1"
     },
     {
+      "id": 5,
       "name": "Reinhard Holzer",
       "matrikelnummer": "82730358125",
       "image": "/src/images/faces/faces_5942420493_s.jpg",

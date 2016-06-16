@@ -1,0 +1,80 @@
+{
+  "materialCategories": [
+    {
+      "id": 1,
+      "name": "Abdrucklöffel"
+    },
+    {
+      "id": 2,
+      "name": "Excavatoren"
+    },
+    {
+      "id": 3,
+      "name": "Feilen / Messer"
+    },
+    {
+      "id": 4,
+      "name": "Füllungsinstrumente"
+    },
+    {
+      "id": 5,
+      "name": "Handinstrumente"
+    },
+    {
+      "id": 6,
+      "name": "Handmeißel"
+    },
+    {
+      "id": 7,
+      "name": "IMPLANTOLOGIE"
+    },
+    {
+      "id": 8,
+      "name": "Injektionsspritzen"
+    },
+    {
+      "id": 9,
+      "name": "KFO"
+    },
+    {
+      "id": 10,
+      "name": "Kofferdam"
+    },
+    {
+      "id": 11,
+      "name": "Kronenentferner und Schlaufensysteme"
+    },
+    {
+      "id": 12,
+      "name": "Küretten und Scaler"
+    },
+    {
+      "id": 13,
+      "name": "Luxierinstumente"
+    },
+    {
+      "id": 14,
+      "name": "Matrizenspanner"
+    },
+    {
+      "id": 15,
+      "name": "Mundspiegel + -griffe"
+    },
+    {
+      "id": 16,
+      "name": "Nadelhalter, Klemmen"
+    },
+    {
+      "id": 17,
+      "name": "Mundsperrer"
+    },
+    {
+      "id": 18,
+      "name": "Paradontologie-Instrumente"
+    },
+    {
+      "id": 19,
+      "name": "Nadelhalter, Klemmen"
+    }
+  ]
+}

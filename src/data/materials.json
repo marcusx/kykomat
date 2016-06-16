@@ -1,92 +1,92 @@
 {
   "materials": [
     {
-      "id": "1",
+      "id": 1,
       "name": "Bohrer",
       "description": "Rundbohrer für Großlöcher",
-      "image": "http://p-hold.com/people/100/100",
+      "image": "images/materials/dental tools_12557871_s.jpg",
       "category": "Werkzeuge",
       "category_id": "1"
     },
     {
-      "id": "2",
-      "name": "Bohrer",
-      "description": "Rundbohrer für Großlöcher",
-      "image": "http://p-hold.com/people/100/100",
+      "id": 2,
+      "name": "Meissel",
+      "description": "Sprengmeissel für Implantatsfurche.",
+      "image": "images/materials/Dental Water Jet_4270764798_s.jpg",
       "category": "Werkzeuge",
       "category_id": "1"
     },
     {
-      "id": "3",
-      "name": "Bohrer",
-      "description": "Rundbohrer für Großlöcher",
-      "image": "images/materials/dummy-100x100-Rocker.jpg",
+      "id": 3,
+      "name": "Feile",
+      "description": "Feile klein, rund",
+      "image": "images/materials/Dentist 2_5376122289_s.jpg",
       "category": "Werkzeuge",
       "category_id": "1"
     },
     {
-      "id": "4",
-      "name": "Bohrer",
-      "description": "Rundbohrer für Großlöcher",
-      "image": "images/materials/dummy-100x100-Rocker.jpg",
+      "id": 4,
+      "name": "Füllungsinstrument",
+      "description": "Spachtel klein.",
+      "image": "images/materials/dentist tools 2_2507124121_s.jpg",
       "category": "Werkzeuge",
-      "category_id": "1"
+      "category_id": "2"
     },
     {
-      "id": "5",
-      "name": "Bohrer",
-      "description": "Rundbohrer für Großlöcher",
-      "image": "images/materials/dummy-100x100-Rocker.jpg",
+      "id": 5,
+      "name": "Handinstrument",
+      "description": "Spezialforke zum Zahnstein abfräsen.",
+      "image": "images/materials/Dentist Tools 36584_4462608299_s.jpg",
       "category": "Werkzeuge",
-      "category_id": "1"
+      "category_id": "3"
     },
     {
-      "id": "6",
-      "name": "Bohrer",
-      "description": "Rundbohrer für Großlöcher",
-      "image": "images/materials/dummy-100x100-Rocker.jpg",
+      "id": 6,
+      "name": "Zange",
+      "description": "Zange zum entfernen von Wurzelresten.",
+      "image": "images/materials/Dentist Tools_19404023_s.jpg",
       "category": "Werkzeuge",
-      "category_id": "1"
+      "category_id": "4"
     },
     {
-      "id": "7",
-      "name": "Bohrer",
-      "description": "Rundbohrer für Großlöcher",
-      "image": "images/materials/dummy-100x100-Rocker.jpg",
+      "id": 7,
+      "name": "Excavator",
+      "description": "Spezialwerkzeug zum excavatieren.",
+      "image": "images/materials/Dentist Tools_7178707251_s.jpg",
       "category": "Werkzeuge",
-      "category_id": "1"
+      "category_id": "4"
     },
     {
-      "id": "8",
+      "id": 8,
       "name": "Bohrer",
-      "description": "Rundbohrer für Großlöcher",
-      "image": "images/materials/dummy-100x100-Rocker.jpg",
+      "description": "Bohrer lang.",
+      "image": "images/materials/Dentist Tools_14684328372_s.jpg",
       "category": "Werkzeuge",
-      "category_id": "1"
+      "category_id": "5"
     },
     {
-      "id": "9",
-      "name": "Bohrer",
-      "description": "Rundbohrer für Großlöcher",
-      "image": "images/materials/dummy-100x100-Rocker.jpg",
+      "id": 9,
+      "name": "Mundsperre",
+      "description": "Stoppen sie Verletzungen durch Schnappoidenpatienten.",
+      "image": "images/materials/Dentist_5376719952_s.jpg",
       "category": "Werkzeuge",
-      "category_id": "1"
+      "category_id": "5"
     },
     {
-      "id": "10",
-      "name": "Bohrer",
-      "description": "Rundbohrer für Großlöcher",
-      "image": "images/materials/dummy-100x100-Rocker.jpg",
+      "id": 10,
+      "name": "Nadelhalter",
+      "description": "Nach dem Zahn ziehen muss nur noch genäht werden.",
+      "image": "images/materials/Teeth tools_2756916994_s.jpg",
       "category": "Werkzeuge",
-      "category_id": "1"
+      "category_id": "5"
     },
     {
-      "id": "11",
-      "name": "Bohrer",
-      "description": "Rundbohrer für Großlöcher",
-      "image": "images/materials/dummy-100x100-Rocker.jpg",
+      "id": 11,
+      "name": "Bohrer klein",
+      "description": "Spitzbohrer für Wurzelbehandlungen",
+      "image": "images/materials/Torture Tools_182086428_s.jpg",
       "category": "Werkzeuge",
-      "category_id": "1"
+      "category_id": "5"
     }
   ]
 }
