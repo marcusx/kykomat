@@ -1,6 +1,9 @@
 var kykomat = angular.module('kykomat', []);
 
-kykomat.controller('mainController', function ($scope, $http) {
+kykomat.controller('mainController', function ($scope, $http, $filter) {
+    
+    $scope.activeCategory = 1;
+    $scope.currentStudentId = 1;
         
     $http.get('/src/data/materials.json').success(function (data) {
         $scope.materials = data.materials;
@@ -10,7 +13,47 @@ kykomat.controller('mainController', function ($scope, $http) {
     });
     $http.get('/src/data/students.json').success(function (data) {
         $scope.students = data.students;
-    });    
+    });
+    
+    $scope.setActiveCategory = function (id) {
+        $scope.activeCategory = id;
+    };
+    
+    $scope.filterUserMaterial = function(value, index, array) {
+        
+        // $scope.stundents might be undefined on load as it loads async.
+        if($scope.students instanceof Array){
+        // We filter the array by id, the result is an array
+        // so we select the element 0
+        var current_student = $filter('filter')($scope.students,{id:$scope.currentStudentId})[0];
+
+        return current_student.materials.indexOf(value.id) !== -1;    
+        }
+    };
+    
+    $scope.addMaterialToCurrentStundent = function (material) {
+
+    //Get the student
+    var student = $filter('filter')($scope.students, { id: $scope.currentStudentId  }, true)[0];
+        
+    student.materials.push(material.id);
+    };
+    
+    $scope.removeMaterialFromCurrentStundent = function (material) {
+        
+    //Get the student
+    var student = $filter('filter')($scope.students, { id: $scope.currentStudentId  }, true)[0];
+    
+    // Remove material id from students materials.
+    var index = student.materials.indexOf(material.id);
+        
+        // Ensure that the value exists at all.
+        if(index !== (-1)){
+               student.materials.splice(index, 1); 
+        }
+
+    };
+    
 });
 
 kykomat.directive('material', function () {
