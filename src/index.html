@@ -26,23 +26,19 @@
       <nav class="navbar navbar-inverse navbar-fixed-top" ng-include="'templates/main-navigation.html'">
       </nav>
       <div class="container-fluid" ng-controller="mainController">
-         <div class="starter-template">
-            <h1>Materialmanagement</h1>
-            <p class="lead">Klicken Sie auf die Artikel in der linken Spalte um sie dem aktuellen Benutzer zuzuweisen.</p>
-         </div>
+
+
          <div class="row">
             <div class="warehouse col-md-6">
                <h2 class="page-header">Ausgabe</h2>
-               <ul class="category-tabs nav nav-tabs">
-                  <li ng-repeat="category in materialCategories" role="presentation"><a href="#"> {{ category.name }} </a></li>
+               <ul class="category-tabs nav nav-pills">  
+              <li ng-repeat="category in materialCategories" ng-click="setActiveCategory(category.id)" ng-class="{ active:category.id === activeCategory}" role="presentation"><a href="#"> {{ category.name }} </a></li>       
                </ul>
-               <category-box ng-repeat="category in materialCategories">
-                  <material ng-repeat="material in materials"></material>
+               <category-box ng-repeat="category in materialCategories" ng-show="category.id === activeCategory">
+                  <material ng-repeat="material in materials | filter:{category_id:activeCategory}" ng-click="addMaterialToCurrentStundent(material)"></material>
                </category-box>
             </div>
             <div class="student col-md-6">
-               <h2 class="page-header">Aktuellen Benutzer Auswählen</h2>
-               <div ng-include="'templates/user-selection.html'"></div>
                <h2 class="page-header">Ausgewählter Benutzer</h2>
                <current-user></current-user>
                <h2 class="page-header">Letzte Ausleihvorgänge</h2>
