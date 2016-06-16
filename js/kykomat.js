@@ -5,13 +5,13 @@ kykomat.controller('mainController', function ($scope, $http, $filter) {
     $scope.activeCategory = 1;
     $scope.currentStudentId = 1;
         
-    $http.get('src/data/materials.json').success(function (data) {
+    $http.get('data/materials.json').success(function (data) {
         $scope.materials = data.materials;
     });
-    $http.get('src/data/material-categories.json').success(function (data) {
+    $http.get('data/material-categories.json').success(function (data) {
         $scope.materialCategories = data.materialCategories;
     });
-    $http.get('src/data/students.json').success(function (data) {
+    $http.get('data/students.json').success(function (data) {
         $scope.students = data.students;
     });
     
