@@ -1,17 +1,17 @@
-var kykomat = angular.module('kykomat', []);
+var kykomat = angular.module('kykomat', ['angularModalService']);
 
-kykomat.controller('mainController', function ($scope, $http, $filter) {
+kykomat.controller('mainController', function ($scope, $http, $filter, ModalService) {
     
     $scope.activeCategory = 1;
     $scope.currentStudentId = 1;
         
-    $http.get('src/data/materials.json').success(function (data) {
+    $http.get('data/materials.json').success(function (data) {
         $scope.materials = data.materials;
     });
-    $http.get('src/data/material-categories.json').success(function (data) {
+    $http.get('data/material-categories.json').success(function (data) {
         $scope.materialCategories = data.materialCategories;
     });
-    $http.get('src/data/students.json').success(function (data) {
+    $http.get('data/students.json').success(function (data) {
         $scope.students = data.students;
     });
     
@@ -54,6 +54,32 @@ kykomat.controller('mainController', function ($scope, $http, $filter) {
 
     };
     
+    $scope.show = function() {
+        console.log('Ping');
+        ModalService.showModal({
+            templateUrl: 'templates/modal.html',
+            controller: "ModalController"
+        }).then(function(modal) {
+            console.log('Ping');
+            modal.element.modal();
+            modal.close.then(function(result) {
+                $scope.message = "You said " + result;
+            });
+        });
+    };
+    
+});
+
+kykomat.controller('ModalController', function($scope, $http, close) {
+    
+      $http.get('data/students.json').success(function (data) {
+        $scope.students = data.students;
+    });
+    
+    
+ $scope.close = function(result) {
+ 	close(result, 500); // close, but give 500ms for bootstrap to animate
+ };
 });
 
 kykomat.directive('material', function () {
