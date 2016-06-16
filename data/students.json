@@ -4,7 +4,7 @@
       "id": 1,
       "name": "Marcus Exner",
       "matrikelnummer": "123456789",
-      "image": "/src/images/faces/face_4548488065_s.jpg",
+      "image": "images/faces/face_4548488065_s.jpg",
       "course": "Tätigkeit als Praktikant",
       "materials": [3,4,5]
     },
