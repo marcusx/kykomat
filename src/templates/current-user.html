@@ -1,7 +1,7 @@
 <div class="panel panel-primary">
    <div class="panel-heading">
       <div class="list-group">
-         <material ng-repeat="material in students[0].materials"></material>
+         <material ng-repeat="material in materials | filter:filterUserMaterial" ng-click="removeMaterialFromCurrentStundent(material)"></material>
       </div>
       <div class="clearfix"></div>
    </div>
