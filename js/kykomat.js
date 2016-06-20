@@ -1,10 +1,10 @@
-var kykomat = angular.module('kykomat', ['angularModalService']);
+var kykomat = angular.module('kykomat', ['angularModalService', 'ui.bootstrap']);
 
 kykomat.controller('mainController', function ($scope, $http, $filter, ModalService) {
     
     $scope.activeCategory = 1;
     $scope.currentStudentId = 1;
-        
+            
     $http.get('data/materials.json').success(function (data) {
         $scope.materials = data.materials;
     });
@@ -13,11 +13,19 @@ kykomat.controller('mainController', function ($scope, $http, $filter, ModalServ
     });
     $http.get('data/students.json').success(function (data) {
         $scope.students = data.students;
+        $scope.currentStudent = $scope.students[0];
     });
+    
+    
     
     $scope.setActiveCategory = function (id) {
         $scope.activeCategory = id;
     };
+    
+    $scope.setActiveStundent = function (student) {
+        $scope.currentStudentId = student.id;
+        console.log(student);
+    }
     
     $scope.filterUserMaterial = function(value, index, array) {
         
@@ -54,6 +62,12 @@ kykomat.controller('mainController', function ($scope, $http, $filter, ModalServ
 
     };
     
+    $scope.$watch('currentStudent', function(newValue, oldValue) {
+        if (typeof newValue === 'object'){
+          $scope.setActiveStundent(newValue);
+        }
+    });
+    
     $scope.show = function() {
         console.log('Ping');
         ModalService.showModal({
@@ -78,8 +92,14 @@ kykomat.controller('ModalController', function($scope, $http, close) {
     
     
  $scope.close = function(result) {
+     console.log('Scope close: ' + result);
  	close(result, 500); // close, but give 500ms for bootstrap to animate
  };
+    
+    $scope.setActiveStundent = function (student) {
+        $scope.currentStudentId = student.id;
+        console.log(student);
+    }    
 });
 
 kykomat.directive('material', function () {
@@ -99,5 +119,12 @@ kykomat.directive('currentUser', function () {
     return {
         transclude: false,
         templateUrl: 'templates/current-user.html'
+    };
+});
+
+kykomat.directive('mainNavigation', function() {
+    return {
+        restrict: 'E',
+        templateUrl: 'templates/main-navigation.html' // markup for template
     };
 });

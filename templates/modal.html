@@ -7,10 +7,9 @@
       </div>
       <div class="modal-body">
           <ul>
-              <li ng-repeat="student in students"><a href="#">{{student.name}}</a></li>
+              <li ng-repeat="student in students" ng-click="setActiveStundent(student)"><a href="#">{{student.name}}</a></li>
           </ul>
-          
-          
+
       </div>
       <div class="modal-footer">
         <button type="button" ng-click="close(true)" class="btn btn-primary" data-dismiss="modal">Cancel</button>
